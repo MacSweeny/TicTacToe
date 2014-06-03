@@ -26,6 +26,7 @@
 		447FB981193CE44B0094B22B /* TTGamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB980193CE44B0094B22B /* TTGamePlayViewController.m */; };
 		447FB984193CE5510094B22B /* TTGridSquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB983193CE5510094B22B /* TTGridSquareView.m */; };
 		447FB986193CF8640094B22B /* TTGridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 447FB985193CF8640094B22B /* TTGridView.xib */; };
+		447FB98A193D7EE50094B22B /* TTGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB989193D7EE50094B22B /* TTGameController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		447FB982193CE5510094B22B /* TTGridSquareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGridSquareView.h; sourceTree = "<group>"; };
 		447FB983193CE5510094B22B /* TTGridSquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGridSquareView.m; sourceTree = "<group>"; };
 		447FB985193CF8640094B22B /* TTGridView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTGridView.xib; sourceTree = "<group>"; };
+		447FB988193D7EE50094B22B /* TTGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGameController.h; sourceTree = "<group>"; };
+		447FB989193D7EE50094B22B /* TTGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGameController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				447FB97E193CE4290094B22B /* Controllers */,
+				447FB987193D7EBB0094B22B /* Model */,
 				447FB97A193CD55D0094B22B /* Views */,
 				447FB951193CD1890094B22B /* TTAppDelegate.h */,
 				447FB952193CD1890094B22B /* TTAppDelegate.m */,
@@ -187,6 +191,15 @@
 				447FB980193CE44B0094B22B /* TTGamePlayViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		447FB987193D7EBB0094B22B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				447FB988193D7EE50094B22B /* TTGameController.h */,
+				447FB989193D7EE50094B22B /* TTGameController.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +305,7 @@
 				447FB981193CE44B0094B22B /* TTGamePlayViewController.m in Sources */,
 				447FB984193CE5510094B22B /* TTGridSquareView.m in Sources */,
 				447FB97D193CD57D0094B22B /* TTGridView.m in Sources */,
+				447FB98A193D7EE50094B22B /* TTGameController.m in Sources */,
 				447FB953193CD1890094B22B /* TTAppDelegate.m in Sources */,
 				447FB94F193CD1890094B22B /* main.m in Sources */,
 				447FB95C193CD1890094B22B /* TTViewController.m in Sources */,

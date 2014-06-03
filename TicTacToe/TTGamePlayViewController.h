@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 #import "TTGridView.h"
+#import "TTGameController.h"
 
-@interface TTGamePlayViewController : UIViewController <TTGridViewDelegate>
+@interface TTGamePlayViewController : UIViewController <TTGridViewDelegate, TTGameControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet TTGridView *gridView;
 

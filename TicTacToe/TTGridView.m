@@ -135,4 +135,13 @@
     [squareView setValue:gridSquareValue];
 }
 
+- (void)clear {
+    for (NSArray *row in self.squareViews) {
+        for (TTGridSquareView *squareView in row) {
+            [squareView setValue:TTGridSquareValueNone];
+        }
+    }
+    [self setNeedsDisplay];
+}
+
 @end
