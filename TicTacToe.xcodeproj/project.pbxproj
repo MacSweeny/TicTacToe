@@ -22,6 +22,10 @@
 		447FB967193CD1890094B22B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447FB946193CD1890094B22B /* UIKit.framework */; };
 		447FB96F193CD1890094B22B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 447FB96D193CD1890094B22B /* InfoPlist.strings */; };
 		447FB971193CD1890094B22B /* TicTacToeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB970193CD1890094B22B /* TicTacToeTests.m */; };
+		447FB97D193CD57D0094B22B /* TTGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB97C193CD57D0094B22B /* TTGridView.m */; };
+		447FB981193CE44B0094B22B /* TTGamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB980193CE44B0094B22B /* TTGamePlayViewController.m */; };
+		447FB984193CE5510094B22B /* TTGridSquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB983193CE5510094B22B /* TTGridSquareView.m */; };
+		447FB986193CF8640094B22B /* TTGridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 447FB985193CF8640094B22B /* TTGridView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,13 @@
 		447FB96C193CD1890094B22B /* TicTacToeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TicTacToeTests-Info.plist"; sourceTree = "<group>"; };
 		447FB96E193CD1890094B22B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		447FB970193CD1890094B22B /* TicTacToeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToeTests.m; sourceTree = "<group>"; };
+		447FB97B193CD57D0094B22B /* TTGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGridView.h; sourceTree = "<group>"; };
+		447FB97C193CD57D0094B22B /* TTGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGridView.m; sourceTree = "<group>"; };
+		447FB97F193CE44B0094B22B /* TTGamePlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGamePlayViewController.h; sourceTree = "<group>"; };
+		447FB980193CE44B0094B22B /* TTGamePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGamePlayViewController.m; sourceTree = "<group>"; };
+		447FB982193CE5510094B22B /* TTGridSquareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGridSquareView.h; sourceTree = "<group>"; };
+		447FB983193CE5510094B22B /* TTGridSquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGridSquareView.m; sourceTree = "<group>"; };
+		447FB985193CF8640094B22B /* TTGridView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTGridView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +125,8 @@
 		447FB948193CD1890094B22B /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				447FB97E193CE4290094B22B /* Controllers */,
+				447FB97A193CD55D0094B22B /* Views */,
 				447FB951193CD1890094B22B /* TTAppDelegate.h */,
 				447FB952193CD1890094B22B /* TTAppDelegate.m */,
 				447FB954193CD1890094B22B /* Main_iPhone.storyboard */,
@@ -153,6 +166,27 @@
 				447FB96D193CD1890094B22B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		447FB97A193CD55D0094B22B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				447FB97B193CD57D0094B22B /* TTGridView.h */,
+				447FB97C193CD57D0094B22B /* TTGridView.m */,
+				447FB985193CF8640094B22B /* TTGridView.xib */,
+				447FB982193CE5510094B22B /* TTGridSquareView.h */,
+				447FB983193CE5510094B22B /* TTGridSquareView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		447FB97E193CE4290094B22B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				447FB97F193CE44B0094B22B /* TTGamePlayViewController.h */,
+				447FB980193CE44B0094B22B /* TTGamePlayViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				447FB986193CF8640094B22B /* TTGridView.xib in Resources */,
 				447FB959193CD1890094B22B /* Main_iPad.storyboard in Resources */,
 				447FB95E193CD1890094B22B /* Images.xcassets in Resources */,
 				447FB956193CD1890094B22B /* Main_iPhone.storyboard in Resources */,
@@ -254,6 +289,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				447FB981193CE44B0094B22B /* TTGamePlayViewController.m in Sources */,
+				447FB984193CE5510094B22B /* TTGridSquareView.m in Sources */,
+				447FB97D193CD57D0094B22B /* TTGridView.m in Sources */,
 				447FB953193CD1890094B22B /* TTAppDelegate.m in Sources */,
 				447FB94F193CD1890094B22B /* main.m in Sources */,
 				447FB95C193CD1890094B22B /* TTViewController.m in Sources */,
@@ -471,6 +509,7 @@
 				447FB976193CD1890094B22B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		447FB977193CD1890094B22B /* Build configuration list for PBXNativeTarget "TicTacToeTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +518,7 @@
 				447FB979193CD1890094B22B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
