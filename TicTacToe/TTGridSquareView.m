@@ -14,7 +14,7 @@
     if (self = [super init]) {
         _row = row;
         _column = column;
-        _value = NULL;
+        _value = TTGridSquareValueNone;
     }
     return self;
 }

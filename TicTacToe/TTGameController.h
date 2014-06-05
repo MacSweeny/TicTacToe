@@ -8,16 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#import "TTBoard.h"
+
 typedef enum {
     TTGameStateActive,
     TTGameStateComplete
 } TTGameState;
-
-typedef enum {
-    TTPlayerX,
-    TTPlayerO,
-    TTPlayerNone
-} TTPlayer;
 
 @protocol TTGameControllerDelegate;
 

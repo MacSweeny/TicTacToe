@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44691BAA193FABC4008391C9 /* TTBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 44691BA9193FABC4008391C9 /* TTBoard.m */; };
+		44691BAD193FD464008391C9 /* TTUltimateWarrior.m in Sources */ = {isa = PBXBuildFile; fileRef = 44691BAC193FD464008391C9 /* TTUltimateWarrior.m */; };
 		447FB943193CD1890094B22B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447FB942193CD1890094B22B /* Foundation.framework */; };
 		447FB945193CD1890094B22B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447FB944193CD1890094B22B /* CoreGraphics.framework */; };
 		447FB947193CD1890094B22B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447FB946193CD1890094B22B /* UIKit.framework */; };
@@ -15,7 +17,6 @@
 		447FB953193CD1890094B22B /* TTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB952193CD1890094B22B /* TTAppDelegate.m */; };
 		447FB956193CD1890094B22B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447FB954193CD1890094B22B /* Main_iPhone.storyboard */; };
 		447FB959193CD1890094B22B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447FB957193CD1890094B22B /* Main_iPad.storyboard */; };
-		447FB95C193CD1890094B22B /* TTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB95B193CD1890094B22B /* TTViewController.m */; };
 		447FB95E193CD1890094B22B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 447FB95D193CD1890094B22B /* Images.xcassets */; };
 		447FB965193CD1890094B22B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447FB964193CD1890094B22B /* XCTest.framework */; };
 		447FB966193CD1890094B22B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447FB942193CD1890094B22B /* Foundation.framework */; };
@@ -25,7 +26,6 @@
 		447FB97D193CD57D0094B22B /* TTGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB97C193CD57D0094B22B /* TTGridView.m */; };
 		447FB981193CE44B0094B22B /* TTGamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB980193CE44B0094B22B /* TTGamePlayViewController.m */; };
 		447FB984193CE5510094B22B /* TTGridSquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB983193CE5510094B22B /* TTGridSquareView.m */; };
-		447FB986193CF8640094B22B /* TTGridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 447FB985193CF8640094B22B /* TTGridView.xib */; };
 		447FB98A193D7EE50094B22B /* TTGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB989193D7EE50094B22B /* TTGameController.m */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44691BA8193FABC4008391C9 /* TTBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBoard.h; sourceTree = "<group>"; };
+		44691BA9193FABC4008391C9 /* TTBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBoard.m; sourceTree = "<group>"; };
+		44691BAB193FD464008391C9 /* TTUltimateWarrior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUltimateWarrior.h; sourceTree = "<group>"; };
+		44691BAC193FD464008391C9 /* TTUltimateWarrior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUltimateWarrior.m; sourceTree = "<group>"; };
 		447FB93F193CD1890094B22B /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		447FB942193CD1890094B22B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		447FB944193CD1890094B22B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,8 +56,6 @@
 		447FB952193CD1890094B22B /* TTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAppDelegate.m; sourceTree = "<group>"; };
 		447FB955193CD1890094B22B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		447FB958193CD1890094B22B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		447FB95A193CD1890094B22B /* TTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTViewController.h; sourceTree = "<group>"; };
-		447FB95B193CD1890094B22B /* TTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTViewController.m; sourceTree = "<group>"; };
 		447FB95D193CD1890094B22B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		447FB963193CD1890094B22B /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		447FB964193CD1890094B22B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -66,7 +68,6 @@
 		447FB980193CE44B0094B22B /* TTGamePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGamePlayViewController.m; sourceTree = "<group>"; };
 		447FB982193CE5510094B22B /* TTGridSquareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGridSquareView.h; sourceTree = "<group>"; };
 		447FB983193CE5510094B22B /* TTGridSquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGridSquareView.m; sourceTree = "<group>"; };
-		447FB985193CF8640094B22B /* TTGridView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTGridView.xib; sourceTree = "<group>"; };
 		447FB988193D7EE50094B22B /* TTGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGameController.h; sourceTree = "<group>"; };
 		447FB989193D7EE50094B22B /* TTGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGameController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +96,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44691BA7193FAB69008391C9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				447FB988193D7EE50094B22B /* TTGameController.h */,
+				447FB989193D7EE50094B22B /* TTGameController.m */,
+				44691BAB193FD464008391C9 /* TTUltimateWarrior.h */,
+				44691BAC193FD464008391C9 /* TTUltimateWarrior.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		447FB936193CD1890094B22B = {
 			isa = PBXGroup;
 			children = (
@@ -130,13 +142,12 @@
 			children = (
 				447FB97E193CE4290094B22B /* Controllers */,
 				447FB987193D7EBB0094B22B /* Model */,
+				44691BA7193FAB69008391C9 /* Service */,
 				447FB97A193CD55D0094B22B /* Views */,
 				447FB951193CD1890094B22B /* TTAppDelegate.h */,
 				447FB952193CD1890094B22B /* TTAppDelegate.m */,
 				447FB954193CD1890094B22B /* Main_iPhone.storyboard */,
 				447FB957193CD1890094B22B /* Main_iPad.storyboard */,
-				447FB95A193CD1890094B22B /* TTViewController.h */,
-				447FB95B193CD1890094B22B /* TTViewController.m */,
 				447FB95D193CD1890094B22B /* Images.xcassets */,
 				447FB949193CD1890094B22B /* Supporting Files */,
 			);
@@ -177,7 +188,6 @@
 			children = (
 				447FB97B193CD57D0094B22B /* TTGridView.h */,
 				447FB97C193CD57D0094B22B /* TTGridView.m */,
-				447FB985193CF8640094B22B /* TTGridView.xib */,
 				447FB982193CE5510094B22B /* TTGridSquareView.h */,
 				447FB983193CE5510094B22B /* TTGridSquareView.m */,
 			);
@@ -196,8 +206,8 @@
 		447FB987193D7EBB0094B22B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				447FB988193D7EE50094B22B /* TTGameController.h */,
-				447FB989193D7EE50094B22B /* TTGameController.m */,
+				44691BA8193FABC4008391C9 /* TTBoard.h */,
+				44691BA9193FABC4008391C9 /* TTBoard.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -279,7 +289,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				447FB986193CF8640094B22B /* TTGridView.xib in Resources */,
 				447FB959193CD1890094B22B /* Main_iPad.storyboard in Resources */,
 				447FB95E193CD1890094B22B /* Images.xcassets in Resources */,
 				447FB956193CD1890094B22B /* Main_iPhone.storyboard in Resources */,
@@ -303,12 +312,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				447FB981193CE44B0094B22B /* TTGamePlayViewController.m in Sources */,
+				44691BAD193FD464008391C9 /* TTUltimateWarrior.m in Sources */,
 				447FB984193CE5510094B22B /* TTGridSquareView.m in Sources */,
 				447FB97D193CD57D0094B22B /* TTGridView.m in Sources */,
 				447FB98A193D7EE50094B22B /* TTGameController.m in Sources */,
+				44691BAA193FABC4008391C9 /* TTBoard.m in Sources */,
 				447FB953193CD1890094B22B /* TTAppDelegate.m in Sources */,
 				447FB94F193CD1890094B22B /* main.m in Sources */,
-				447FB95C193CD1890094B22B /* TTViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
