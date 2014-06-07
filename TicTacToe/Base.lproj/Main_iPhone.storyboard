@@ -16,24 +16,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yq3-pQ-raN" customClass="TTGridView">
-                                <rect key="frame" x="10" y="134" width="300" height="300"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3S-ts-Ys0" userLabel="Game Container View">
+                                <rect key="frame" x="0.0" y="64" width="320" height="440"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p9N-ju-Mtl" customClass="TTGridSquareView">
+                                        <rect key="frame" x="240" y="20" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vEP-Sm-7qg" customClass="TTGridSquareView">
+                                        <rect key="frame" x="10" y="20" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="I3L-jE-R7z"/>
+                                            <constraint firstAttribute="width" constant="70" id="pbm-Su-5SE"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yq3-pQ-raN" customClass="TTGridView">
+                                        <rect key="frame" x="10" y="120" width="300" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="B6E-gW-6Fj"/>
+                                            <constraint firstAttribute="height" constant="300" id="fiu-OF-tEa"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfc-rc-FL2">
+                                        <rect key="frame" x="31" y="90" width="29" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XU-OD-P2X">
+                                        <rect key="frame" x="259" y="90" width="33" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="B6E-gW-6Fj"/>
-                                    <constraint firstAttribute="height" constant="300" id="fiu-OF-tEa"/>
+                                    <constraint firstItem="vEP-Sm-7qg" firstAttribute="centerX" secondItem="pfc-rc-FL2" secondAttribute="centerX" id="2lF-9P-Uz5"/>
+                                    <constraint firstItem="8XU-OD-P2X" firstAttribute="top" secondItem="p9N-ju-Mtl" secondAttribute="bottom" id="4Iv-Cp-mxn"/>
+                                    <constraint firstItem="Yq3-pQ-raN" firstAttribute="trailing" secondItem="p9N-ju-Mtl" secondAttribute="trailing" id="87g-8x-pLs"/>
+                                    <constraint firstItem="vEP-Sm-7qg" firstAttribute="leading" secondItem="Yq3-pQ-raN" secondAttribute="leading" id="Fao-aV-ogz"/>
+                                    <constraint firstItem="vEP-Sm-7qg" firstAttribute="width" secondItem="p9N-ju-Mtl" secondAttribute="width" id="Jl9-R0-FAZ"/>
+                                    <constraint firstItem="Yq3-pQ-raN" firstAttribute="top" secondItem="vEP-Sm-7qg" secondAttribute="bottom" constant="30" id="OQ1-gm-oAP"/>
+                                    <constraint firstItem="p9N-ju-Mtl" firstAttribute="centerX" secondItem="8XU-OD-P2X" secondAttribute="centerX" constant="-0.5" id="Tg8-Ho-tBI"/>
+                                    <constraint firstItem="pfc-rc-FL2" firstAttribute="top" secondItem="vEP-Sm-7qg" secondAttribute="bottom" id="cKQ-ua-1iD"/>
+                                    <constraint firstItem="vEP-Sm-7qg" firstAttribute="height" secondItem="p9N-ju-Mtl" secondAttribute="height" id="gd5-c3-dH9"/>
+                                    <constraint firstItem="vEP-Sm-7qg" firstAttribute="top" secondItem="p9N-ju-Mtl" secondAttribute="top" id="iAp-N9-qFv"/>
+                                    <constraint firstAttribute="centerX" secondItem="Yq3-pQ-raN" secondAttribute="centerX" id="jOo-uX-1ba"/>
+                                    <constraint firstItem="vEP-Sm-7qg" firstAttribute="top" secondItem="h3S-ts-Ys0" secondAttribute="top" constant="20" id="mDE-oH-X9V"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yq3-pQ-raN" secondAttribute="bottom" constant="20" id="uP5-BH-rcX"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="Yq3-pQ-raN" secondAttribute="centerY" id="OKL-NP-d7M"/>
-                            <constraint firstAttribute="centerX" secondItem="Yq3-pQ-raN" secondAttribute="centerX" id="Ohp-Ed-qbN"/>
+                            <constraint firstAttribute="centerX" secondItem="h3S-ts-Ys0" secondAttribute="centerX" id="5Dg-Hb-Ojz"/>
+                            <constraint firstAttribute="centerY" secondItem="h3S-ts-Ys0" secondAttribute="centerY" id="RmZ-CV-QXR"/>
+                            <constraint firstItem="h3S-ts-Ys0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Wz9-Sz-AhO"/>
+                            <constraint firstAttribute="trailing" secondItem="h3S-ts-Ys0" secondAttribute="trailing" id="kfq-WO-ToJ"/>
+                            <constraint firstAttribute="centerY" secondItem="h3S-ts-Ys0" secondAttribute="centerY" id="zne-rF-kJt"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gameContainerView" destination="h3S-ts-Ys0" id="BPW-dO-gVh"/>
                         <outlet property="gridView" destination="Yq3-pQ-raN" id="CtD-Wi-bZd"/>
+                        <outlet property="opponentPlayerNameLabel" destination="8XU-OD-P2X" id="g7C-qB-eJX"/>
+                        <outlet property="opponentPlayerSquareView" destination="p9N-ju-Mtl" id="0PL-HI-dPH"/>
+                        <outlet property="userPlayerNameLabel" destination="pfc-rc-FL2" id="fe3-3Z-Ry9"/>
+                        <outlet property="userPlayerSquareView" destination="vEP-Sm-7qg" id="nxk-IC-b54"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

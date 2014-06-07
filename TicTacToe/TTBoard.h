@@ -25,6 +25,8 @@ typedef enum {
 
 @interface TTBoard : NSObject
 
+@property (nonatomic, readonly) NSArray *winningSquares;
+
 + (TTBoard *)copyBoard:(TTBoard *)board;
 
 - (TTPlayer)playerAtBoardIndex:(TTBoardIndex *)boardIndex;

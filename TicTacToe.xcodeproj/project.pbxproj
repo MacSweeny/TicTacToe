@@ -16,7 +16,6 @@
 		447FB94F193CD1890094B22B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB94E193CD1890094B22B /* main.m */; };
 		447FB953193CD1890094B22B /* TTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB952193CD1890094B22B /* TTAppDelegate.m */; };
 		447FB956193CD1890094B22B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447FB954193CD1890094B22B /* Main_iPhone.storyboard */; };
-		447FB959193CD1890094B22B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447FB957193CD1890094B22B /* Main_iPad.storyboard */; };
 		447FB95E193CD1890094B22B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 447FB95D193CD1890094B22B /* Images.xcassets */; };
 		447FB965193CD1890094B22B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447FB964193CD1890094B22B /* XCTest.framework */; };
 		447FB966193CD1890094B22B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447FB942193CD1890094B22B /* Foundation.framework */; };
@@ -27,6 +26,8 @@
 		447FB981193CE44B0094B22B /* TTGamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB980193CE44B0094B22B /* TTGamePlayViewController.m */; };
 		447FB984193CE5510094B22B /* TTGridSquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB983193CE5510094B22B /* TTGridSquareView.m */; };
 		447FB98A193D7EE50094B22B /* TTGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447FB989193D7EE50094B22B /* TTGameController.m */; };
+		44F630DD19412668002A9C68 /* TTTurnIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F630DC19412668002A9C68 /* TTTurnIndicatorView.m */; };
+		44F630E119417594002A9C68 /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F630E019417594002A9C68 /* UIColor+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,6 @@
 		447FB951193CD1890094B22B /* TTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTAppDelegate.h; sourceTree = "<group>"; };
 		447FB952193CD1890094B22B /* TTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAppDelegate.m; sourceTree = "<group>"; };
 		447FB955193CD1890094B22B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		447FB958193CD1890094B22B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		447FB95D193CD1890094B22B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		447FB963193CD1890094B22B /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		447FB964193CD1890094B22B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -70,6 +70,10 @@
 		447FB983193CE5510094B22B /* TTGridSquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGridSquareView.m; sourceTree = "<group>"; };
 		447FB988193D7EE50094B22B /* TTGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGameController.h; sourceTree = "<group>"; };
 		447FB989193D7EE50094B22B /* TTGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGameController.m; sourceTree = "<group>"; };
+		44F630DB19412668002A9C68 /* TTTurnIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTurnIndicatorView.h; sourceTree = "<group>"; };
+		44F630DC19412668002A9C68 /* TTTurnIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTurnIndicatorView.m; sourceTree = "<group>"; };
+		44F630DF19417594002A9C68 /* UIColor+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utils.h"; sourceTree = "<group>"; };
+		44F630E019417594002A9C68 /* UIColor+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,7 @@
 		447FB948193CD1890094B22B /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				44F630DE19417585002A9C68 /* Util */,
 				447FB97E193CE4290094B22B /* Controllers */,
 				447FB987193D7EBB0094B22B /* Model */,
 				44691BA7193FAB69008391C9 /* Service */,
@@ -147,7 +152,6 @@
 				447FB951193CD1890094B22B /* TTAppDelegate.h */,
 				447FB952193CD1890094B22B /* TTAppDelegate.m */,
 				447FB954193CD1890094B22B /* Main_iPhone.storyboard */,
-				447FB957193CD1890094B22B /* Main_iPad.storyboard */,
 				447FB95D193CD1890094B22B /* Images.xcassets */,
 				447FB949193CD1890094B22B /* Supporting Files */,
 			);
@@ -190,6 +194,8 @@
 				447FB97C193CD57D0094B22B /* TTGridView.m */,
 				447FB982193CE5510094B22B /* TTGridSquareView.h */,
 				447FB983193CE5510094B22B /* TTGridSquareView.m */,
+				44F630DB19412668002A9C68 /* TTTurnIndicatorView.h */,
+				44F630DC19412668002A9C68 /* TTTurnIndicatorView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -210,6 +216,15 @@
 				44691BA9193FABC4008391C9 /* TTBoard.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		44F630DE19417585002A9C68 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				44F630DF19417594002A9C68 /* UIColor+Utils.h */,
+				44F630E019417594002A9C68 /* UIColor+Utils.m */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +304,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				447FB959193CD1890094B22B /* Main_iPad.storyboard in Resources */,
 				447FB95E193CD1890094B22B /* Images.xcassets in Resources */,
 				447FB956193CD1890094B22B /* Main_iPhone.storyboard in Resources */,
 				447FB94D193CD1890094B22B /* InfoPlist.strings in Resources */,
@@ -311,10 +325,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F630DD19412668002A9C68 /* TTTurnIndicatorView.m in Sources */,
 				447FB981193CE44B0094B22B /* TTGamePlayViewController.m in Sources */,
 				44691BAD193FD464008391C9 /* TTUltimateWarrior.m in Sources */,
 				447FB984193CE5510094B22B /* TTGridSquareView.m in Sources */,
 				447FB97D193CD57D0094B22B /* TTGridView.m in Sources */,
+				44F630E119417594002A9C68 /* UIColor+Utils.m in Sources */,
 				447FB98A193D7EE50094B22B /* TTGameController.m in Sources */,
 				44691BAA193FABC4008391C9 /* TTBoard.m in Sources */,
 				447FB953193CD1890094B22B /* TTAppDelegate.m in Sources */,
@@ -355,14 +371,6 @@
 				447FB955193CD1890094B22B /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		447FB957193CD1890094B22B /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				447FB958193CD1890094B22B /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		447FB96D193CD1890094B22B /* InfoPlist.strings */ = {
@@ -457,6 +465,7 @@
 				GCC_PREFIX_HEADER = "TicTacToe/TicTacToe-Prefix.pch";
 				INFOPLIST_FILE = "TicTacToe/TicTacToe-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -470,6 +479,7 @@
 				GCC_PREFIX_HEADER = "TicTacToe/TicTacToe-Prefix.pch";
 				INFOPLIST_FILE = "TicTacToe/TicTacToe-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

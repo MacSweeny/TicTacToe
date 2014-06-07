@@ -19,6 +19,11 @@
 
 @end
 
+@interface TTBoard ()
+
+@property (nonatomic, strong) NSMutableArray *winningSquares;
+
+@end
 
 @implementation TTBoard {
     NSInteger _squares [3][3];
@@ -50,6 +55,11 @@
             hasUnplayedSquares = YES;
         } else if (_squares[rowIdx][0] == _squares[rowIdx][1] && _squares[rowIdx][1] == _squares[rowIdx][2]) {
             *winner = _squares[rowIdx][0];
+            self.winningSquares = @[
+                                    [TTBoardIndex boardIndexForRow:rowIdx column:0],
+                                     [TTBoardIndex boardIndexForRow:rowIdx column:1],
+                                     [TTBoardIndex boardIndexForRow:rowIdx column:2]
+                                    ];
             return YES;
         }
     }
@@ -59,17 +69,32 @@
             hasUnplayedSquares = YES;
         } else if (_squares[0][colIdx] == _squares[1][colIdx] && _squares[1][colIdx] == _squares[2][colIdx]) {
             *winner = _squares[0][colIdx];
+            self.winningSquares = @[
+                                    [TTBoardIndex boardIndexForRow:0 column:colIdx],
+                                    [TTBoardIndex boardIndexForRow:1 column:colIdx],
+                                    [TTBoardIndex boardIndexForRow:2 column:colIdx]
+                                    ];
             return YES;
         }
     }
     
     if (_squares[1][1] != TTPlayerNone && _squares[0][0] == _squares[1][1] && _squares[1][1] == _squares[2][2]) {
         *winner = _squares[1][1];
+        self.winningSquares = @[
+                                [TTBoardIndex boardIndexForRow:0 column:0],
+                                [TTBoardIndex boardIndexForRow:1 column:1],
+                                [TTBoardIndex boardIndexForRow:2 column:2]
+                                ];
         return YES;
     }
     
     if (_squares[1][1] != TTPlayerNone && _squares[2][0] == _squares[1][1] && _squares[1][1] == _squares[0][2]) {
         *winner = _squares[1][1];
+        self.winningSquares = @[
+                                [TTBoardIndex boardIndexForRow:2 column:0],
+                                [TTBoardIndex boardIndexForRow:1 column:1],
+                                [TTBoardIndex boardIndexForRow:0 column:2]
+                                ];
         return YES;
     }
     
@@ -93,4 +118,5 @@
         }
     }
 }
+
 @end

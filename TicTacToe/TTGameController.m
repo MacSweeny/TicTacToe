@@ -38,7 +38,7 @@
     _winner = winner;
     _gameState = TTGameStateComplete;
     if (self.delegate) {
-        [self.delegate gameCompleteWithWinner:winner];
+        [self.delegate gameCompleteWithWinner:winner squares:[self.board winningSquares]];
     }
 }
 
@@ -58,21 +58,36 @@
         && currentValueAtSquare == TTPlayerNone) {
         [self.board setPlayer:self.userPlayer atBoardIndex:boardIndexForTurn];
         
+        _currentPlayer = self.opponentPlayer;
+        
         // check complete?
         [self checkComplete];
         
         if (self.gameState != TTGameStateComplete) {
-            _currentPlayer = self.opponentPlayer;
-            TTBoardIndex *nextMove = [TTUltimateWarrior suggestMoveForPlayer:self.opponentPlayer inBoard:self.board];
-            [self.board setPlayer:self.opponentPlayer atBoardIndex:nextMove];
-            [self checkComplete];
             
-            if (self.gameState != TTGameStateComplete) {
-                _currentPlayer = self.userPlayer;
-            }
-            if (self.delegate) {
-                [self.delegate player:self.opponentPlayer playedAtRow:nextMove.row column:nextMove.column];
-            }
+            dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                
+                // Normalizing time it takes for optimal move calculation... to make opponent appear more human...
+                double delayInSeconds = 1.5;
+                dispatch_time_t dispatchTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+                
+                TTBoardIndex *nextMove = [TTUltimateWarrior suggestMoveForPlayer:self.opponentPlayer inBoard:self.board];
+                
+                dispatch_after(dispatchTime, dispatch_get_main_queue(), ^{
+                    [self.board setPlayer:self.opponentPlayer atBoardIndex:nextMove];
+                    
+                    if (self.delegate) {
+                        [self.delegate player:self.opponentPlayer playedAtRow:nextMove.row column:nextMove.column];
+                    }
+                    
+                    [self checkComplete];
+                    
+                    if (self.gameState != TTGameStateComplete) {
+                        _currentPlayer = self.userPlayer;
+                    }
+                    
+                });
+            });
             
         }
     

@@ -8,6 +8,8 @@
 
 #import "TTGridSquareView.h"
 
+const CGFloat LineWidthScaleOfRadius = 0.3;
+
 @implementation TTGridSquareView
 
 - (id)initWithRow:(NSInteger)row column:(NSInteger)column {
@@ -19,9 +21,26 @@
     return self;
 }
 
+- (void)highlightSquare {
+    if (self.value == TTGridSquareValueX) {
+        [self setBackgroundColor:[[UIColor blueColor] deSaturate]];
+        [self setNeedsDisplay];
+    } else if (self.value == TTGridSquareValueO) {
+        [self setBackgroundColor:[[UIColor redColor] deSaturate]];
+        [self setNeedsDisplay];
+    }
+}
+
+- (void)clearHighlight {
+    [self setBackgroundColor:[UIColor clearColor]];
+    [self setNeedsDisplay];
+}
+
 - (void)drawXAtPoint:(CGPoint)point radius:(CGFloat)radius context:(CGContextRef)context {
     
-    CGContextSetLineWidth(context, 5);
+    CGFloat lineWidth = radius * LineWidthScaleOfRadius;
+    
+    CGContextSetLineWidth(context, lineWidth);
     [[UIColor blueColor] setStroke];
     
     CGContextMoveToPoint(context, point.x - radius, point.y - radius);
@@ -35,7 +54,9 @@
 
 - (void)drawCircleAtPoint:(CGPoint)point radius:(CGFloat)radius context:(CGContextRef)context {
     
-    CGContextSetLineWidth(context, 5);
+    CGFloat lineWidth = radius * LineWidthScaleOfRadius;
+    
+    CGContextSetLineWidth(context, lineWidth);
     [[UIColor redColor] setStroke];
     
     CGContextBeginPath(context);

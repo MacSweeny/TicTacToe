@@ -35,6 +35,6 @@ typedef enum {
 @protocol TTGameControllerDelegate <NSObject>
 
 - (void)player:(TTPlayer)player playedAtRow:(NSInteger)row column:(NSInteger)column;
-- (void)gameCompleteWithWinner:(TTPlayer)winner;
+- (void)gameCompleteWithWinner:(TTPlayer)winner squares:(NSArray *)squares;
 
 @end

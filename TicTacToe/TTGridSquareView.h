@@ -17,5 +17,7 @@
 @property (nonatomic) TTGridSquareValue value;
 
 - (id)initWithRow:(NSInteger)row column:(NSInteger)column;
+- (void)highlightSquare;
+- (void)clearHighlight;
 
 @end

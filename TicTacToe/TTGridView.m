@@ -135,10 +135,16 @@
     [squareView setValue:gridSquareValue];
 }
 
+- (void)highlightSquareAtRow:(NSInteger)row column:(NSInteger)column {
+    TTGridSquareView *squareView = (TTGridSquareView *)[[self.squareViews objectAtIndex:row] objectAtIndex:column];
+    [squareView highlightSquare];
+}
+
 - (void)clear {
     for (NSArray *row in self.squareViews) {
         for (TTGridSquareView *squareView in row) {
             [squareView setValue:TTGridSquareValueNone];
+            [squareView clearHighlight];
         }
     }
     [self setNeedsDisplay];

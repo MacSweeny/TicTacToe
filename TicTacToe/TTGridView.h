@@ -21,6 +21,7 @@ typedef enum {
 @property (weak, nonatomic) id<TTGridViewDelegate> delegate;
 
 - (void)setGridSquareValue:(TTGridSquareValue)value atRow:(NSInteger)row column:(NSInteger)column;
+- (void)highlightSquareAtRow:(NSInteger)row column:(NSInteger)column;
 - (void)clear;
 
 @end
